@@ -5,6 +5,7 @@ import com.MyApp.DoctorConsultantApp.model.User;
 import com.MyApp.DoctorConsultantApp.repository.UserRepository;
 import com.MyApp.DoctorConsultantApp.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,6 +18,12 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.cors.CorsConfigurationSource;
+
+import java.util.Arrays;
+import java.util.Collections;
 
 @Configuration
 @EnableWebSecurity
@@ -26,6 +33,9 @@ public class SecurityConfig {
     @Autowired
     private AdminService adminService;
 
+    @Value("${app.frontend.url}")
+    private String frontendUrl;
+
     @Bean
     public CommandLineRunner insertAdmin(UserRepository userRepository, BCryptPasswordEncoder passwordEncoder) {
         return args -> {
@@ -33,7 +43,7 @@ public class SecurityConfig {
                 User admin = new User();
                 admin.setFullName("Admin");
                 admin.setEmail("admin@gmail.com");
-                admin.setPassword(passwordEncoder.encode("admin@123")); // 💡 HASHED!
+                admin.setPassword(passwordEncoder.encode("admin@123"));
                 admin.setPhone("9059021804");
                 admin.setRole(Role.ADMIN);
                 userRepository.save(admin);
@@ -44,7 +54,7 @@ public class SecurityConfig {
     @Bean
     public AuthenticationManager authenticationManager(HttpSecurity http) throws Exception {
         AuthenticationManagerBuilder authBuilder = http.getSharedObject(AuthenticationManagerBuilder.class);
-        authBuilder.userDetailsService(adminService).passwordEncoder(new BCryptPasswordEncoder());
+        authBuilder.userDetailsService(adminService).passwordEncoder(passwordEncoder());
         return authBuilder.build();
     }
 
@@ -57,6 +67,7 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
+                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
                                 "/api/doctor/register",
@@ -87,4 +98,18 @@ public class SecurityConfig {
                 .httpBasic(Customizer.withDefaults())
                 .build();
     }
+
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration config = new CorsConfiguration();
+        config.setAllowedOrigins(Collections.singletonList(frontendUrl));
+        config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        config.setAllowedHeaders(Collections.singletonList("*"));
+        config.setAllowCredentials(true); // If you use cookies/auth
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", config);
+        return source;
+    }
 }
+

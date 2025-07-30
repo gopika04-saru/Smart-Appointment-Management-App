@@ -12,7 +12,6 @@ import com.MyApp.DoctorConsultantApp.repository.UserRepository;
 import com.MyApp.DoctorConsultantApp.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 

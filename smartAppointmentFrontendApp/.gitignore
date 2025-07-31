@@ -3,11 +3,25 @@
 # dependencies
 node_modules/
 
-# Expo
-.expo/
+# Expo specific
+.expo
+.expo-shared/
 dist/
 web-build/
 expo-env.d.ts
+
+# IDEs
+.idea/
+.vscode/
+
+# Native build files
+android/
+ios/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
 
 # Native
 .kotlin/

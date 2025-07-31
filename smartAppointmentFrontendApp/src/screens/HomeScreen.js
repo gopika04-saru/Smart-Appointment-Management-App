@@ -70,8 +70,8 @@ const HomeScreen = ({ navigation }) => {
   ]
 
   const [popularDoctors, setPopularDoctors] = useState([
-    { id: 1, data: null, image: require('../../assets/images/doc1.jpg') },
-    { id: 2, data: null, image: require('../../assets/images/doc2.jpg') },
+    { id: 1, data: null, image: require('../../assets/images/docf.jpg') },
+    { id: 2, data: null, image: require('../../assets/images/doc1.jpg') },
   ]);
 
   useEffect(() => {
@@ -80,8 +80,8 @@ const HomeScreen = ({ navigation }) => {
         const doctor1 = await getDoctorById(1);
         const doctor2 = await getDoctorById(2);
         setPopularDoctors([
-          { id: 1, data: doctor1, image: require('../../assets/images/doc1.jpg') },
-          { id: 2, data: doctor2, image: require('../../assets/images/doc2.jpg') },
+          { id: 1, data: doctor1, image: require('../../assets/images/docf.jpg') },
+          { id: 2, data: doctor2, image: require('../../assets/images/doc1.jpg') },
         ]);
       } catch (err) {
         console.error('Failed to fetch popular doctors:', err);

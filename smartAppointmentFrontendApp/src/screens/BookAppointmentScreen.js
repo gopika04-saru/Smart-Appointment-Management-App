@@ -11,6 +11,7 @@ import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import api from '../services/Api';
 import { RefreshControl } from 'react-native';
+import { getDoctorProfileImage } from '../utils/helpers';
 
 const BookAppointmentScreen = ({ route, navigation }) => {
   const { appointmentId, userId } = route?.params || {};
@@ -77,7 +78,7 @@ const BookAppointmentScreen = ({ route, navigation }) => {
         {/* Doctor Info */}
         <View style={styles.doctorRow}>
           <Image
-            source={require('../../assets/images/doc3.jpg')}
+            source={getDoctorProfileImage(appointment.doctor.gender)}
             style={styles.avatar}
           />
           <View style={styles.docDetails}>

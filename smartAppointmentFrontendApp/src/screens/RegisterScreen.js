@@ -172,7 +172,7 @@ const RegisterScreen = ({ navigation }) => {
 
               <Text style={styles.loginText}>
                 Already have an account?{' '}
-                <Text style={styles.loginLink} onPress={() => navigation.navigate('login')}>
+                <Text style={styles.loginLink} onPress={() => navigation.navigate('Login')}>
                   Log In
                 </Text>
               </Text>

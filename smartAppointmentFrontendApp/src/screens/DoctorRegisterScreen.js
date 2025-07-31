@@ -51,6 +51,7 @@ const DoctorRegisterScreen = ({ navigation }) => {
     password: '',
     specialization: '',
     qualification: '',
+    gender:'',
     bio: '',
     fees: '',
     rating: '',
@@ -77,7 +78,9 @@ const DoctorRegisterScreen = ({ navigation }) => {
   const tagsList = [
     'Fever', 'Child Care', 'Leg Pains', 'Headache', 'Diabetes',
     'Skin Allergy', 'Vision Issues', 'Mental Health', 'Thyroid', 'Heart Health',
-    'Back Pain', 'Allergy', 'Cold & Cough', 'Arthritis'
+    'Back Pain', 'Allergy', 'Cold & Cough', 'Arthritis','High Blood Pressure', 'Chest Pain', 'Asthma', 'Depression', 'Anxiety',
+    'Hair Loss', 'Ear Pain', 'Sinusitis', 'Constipation', 'Acne',
+    'Weight Loss', 'Menstrual Issues', 'Pregnancy Care',
   ];
 
   return (
@@ -104,6 +107,7 @@ const DoctorRegisterScreen = ({ navigation }) => {
             { key: 'email', placeholder: 'Email', icon: <MaterialIcons name="email" size={20} color={COMMON_TEAL} /> },
             { key: 'password', placeholder: 'Password', icon: <MaterialIcons name="lock" size={20} color={COMMON_TEAL} />, secure: true },
             { key: 'qualification', placeholder: 'Qualification', icon: <MaterialIcons name="school" size={20} color={COMMON_TEAL} /> },
+            { key: 'gender', placeholder: 'Gender', icon: <MaterialIcons name="person" size={20} color={COMMON_TEAL} /> },
             { key: 'bio', placeholder: 'Short Bio', icon: <MaterialIcons name="info" size={20} color={COMMON_TEAL} /> },
           ].map(({ key, placeholder, icon, secure }) => (
             <View key={key} style={styles.inputContainer}>
@@ -230,7 +234,7 @@ const DoctorRegisterScreen = ({ navigation }) => {
 
           <Text style={styles.loginText}>
             Already have an account?{' '}
-            <Text style={styles.loginLink} onPress={() => navigation.navigate('login')}>
+            <Text style={styles.loginLink} onPress={() => navigation.navigate('Login')}>
               Log In
             </Text>
           </Text>

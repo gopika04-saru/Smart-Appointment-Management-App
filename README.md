@@ -1,6 +1,6 @@
 # 📅 Smart Appointment Management System
 
-A full-stack **Healthcare Appointment Management App** designed with **React Native** frontend and **Spring Boot** backend (Java), backed by **Neon Postgres** cloud database. It facilitates booking doctor appointments, real-time notifications, secure video consultations, role-based dashboards, and much more.
+A full-stack **Healthcare Appointment Management App** designed with **React Native** frontend and **Spring Boot** backend (Java), backed by **Neon Postgres** cloud database. It facilitates booking doctor appointments, real-time notifications, secure video consultations, role-based dashboards, and much more.[![Watch Demo]](https://drive.google.com/file/d/1VSTcR2wKID1rBdnw2Gbb8ZJXYcoM3b70/view?usp=sharing)
 
 ---
 

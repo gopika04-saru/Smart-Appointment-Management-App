@@ -219,8 +219,6 @@ Added **UI** in the assets/ folder and reference them below:
   <img src="assets/screenshots/login.jpg" alt="Login Page" width="200"/>
 </p>
 
----
-
 <h2 align="center">Admin View</h2>
 <p align="center">
   <img src="assets/screenshots/admin_view.jpg" alt="Admin Dashboard" width="200"/>
@@ -228,14 +226,12 @@ Added **UI** in the assets/ folder and reference them below:
   <img src="assets/screenshots/admin_doctor_approval.jpg" alt="Admin approves doctor" width="200"/>
 </p>
 
----
 <h2 align="center">Doctor View</h2>
 <p align="center">
   <img src="assets/screenshots/doctor_profile.jpg" alt="Doctor Profile Page" width="200"/>
   <img src="assets/screenshots/doctor_appoint.jpg" alt="Doctor Appointment" width="200"/>
 </p>
 
----
 <h2 align="center">User View</h2>
 <p align="center">
   <img src="assets/screenshots/user_home.jpg" alt="User Home" width="200"/>
@@ -243,8 +239,6 @@ Added **UI** in the assets/ folder and reference them below:
   <img src="assets/screenshots/msg.jpg" alt="User Doctors view" width="200"/>
   <img src="assets/screenshots/user_moew.jpg" alt="user activities" width="200"/>
 </p>
-
----
 
 <h2 align="center">Appointment Booking</h2>
 <p align="center">
@@ -369,7 +363,7 @@ FRONTEND_URL=<your_frontend_url>
 
 Check out the live demo of the **Smart Appointment Management System**:
 
-[![Watch Demo](https://drive.google.com/file/d/1VSTcR2wKID1rBdnw2Gbb8ZJXYcoM3b70/view?usp=sharing)](https://drive.google.com/file/d/1VSTcR2wKID1rBdnw2Gbb8ZJXYcoM3b70/view?usp=sharing)
+[![Watch Demo]](https://drive.google.com/file/d/1VSTcR2wKID1rBdnw2Gbb8ZJXYcoM3b70/view?usp=sharing)
 
 
 ## 📞 Contact

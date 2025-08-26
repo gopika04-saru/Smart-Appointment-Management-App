@@ -240,6 +240,7 @@ Added **UI** in the assets/ folder and reference them below:
 <p align="center">
   <img src="assets/screenshots/user_home.jpg" alt="User Home" width="200"/>
   <img src="assets/screenshots/user_doctor_view.jpg" alt="User Doctors view" width="200"/>
+  <img src="assets/screenshots/msg.jpg" alt="User Doctors view" width="200"/>
   <img src="assets/screenshots/user_moew.jpg" alt="user activities" width="200"/>
 </p>
 
@@ -364,6 +365,12 @@ DB_USERNAME=<your_neon_username>
 DB_PASSWORD=<your_neon_password>
 FRONTEND_URL=<your_frontend_url>
 ```
+## Demo Video
+
+Check out the live demo of the **Smart Appointment Management System**:
+
+[![Watch Demo](https://drive.google.com/file/d/1VSTcR2wKID1rBdnw2Gbb8ZJXYcoM3b70/view?usp=sharing)](https://drive.google.com/file/d/1VSTcR2wKID1rBdnw2Gbb8ZJXYcoM3b70/view?usp=sharing)
+
 
 ## 📞 Contact
 

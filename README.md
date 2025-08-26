@@ -11,6 +11,8 @@ A full-stack **Healthcare Appointment Management App** designed with **React Nat
 - Role-based navigation after login
 - Secure user registration & password change
 
+---
+
 ### 👤 User Module
 - Profile view and update
 - Search doctors by specialization
@@ -26,12 +28,16 @@ A full-stack **Healthcare Appointment Management App** designed with **React Nat
   - Payment success
   - Appointment completion
 
+---
+
 ### 👨‍⚕️ Doctor Module
 - Register and wait for **admin approval**
 - Post-approval login access
 - View appointments where selected by users
 - Approve appointments based on availability
 - Join video call after payment is done
+
+---
 
 ### 🧑‍💼 Admin Module
 - Login dashboard with stats:
@@ -98,6 +104,8 @@ AppointmentApp/
 </dependencies>
 ```
 
+---
+
 ## Setup and Installation
 
 1. **Clone the repository:**
@@ -121,6 +129,8 @@ AppointmentApp/
    ```bash
    mvn clean install
    ```
+
+---
 
 ## Running the Application
 
@@ -181,6 +191,7 @@ AppointmentApp/
 |--------|---------------------------------------------------|----------------|
 | POST   | `localhost:8080/api/payments/pay/{appointmentId}` | Make a payment |
 
+
 ## Configuration
 
 Update `application.properties` for database and server port:
@@ -194,10 +205,13 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 ```
 
+---
+
 ## 📲 Screenshots
 
 Added **UI** in the assets/ folder and reference them below:
 
+<h2 align="center">Authentication</h2>
 <p align="center">
   <img src="assets/screenshots/main.jpg" alt="Main" width="200"/>
   <img src="assets/screenshots/patient_register.jpg" alt="User Registration" width="200"/>
@@ -205,23 +219,33 @@ Added **UI** in the assets/ folder and reference them below:
   <img src="assets/screenshots/login.jpg" alt="Login Page" width="200"/>
 </p>
 
+---
+
+<h2 align="center">Admin View</h2>
 <p align="center">
   <img src="assets/screenshots/admin_view.jpg" alt="Admin Dashboard" width="200"/>
   <img src="assets/screenshots/admin_appoint.jpg" alt="Admin Appointments View" width="200"/>
   <img src="assets/screenshots/admin_doctor_approval.jpg" alt="Admin approves doctor" width="200"/>
 </p>
 
+---
+<h2 align="center">Doctor View</h2>
 <p align="center">
   <img src="assets/screenshots/doctor_profile.jpg" alt="Doctor Profile Page" width="200"/>
   <img src="assets/screenshots/doctor_appoint.jpg" alt="Doctor Appointment" width="200"/>
 </p>
 
+---
+<h2 align="center">User View</h2>
 <p align="center">
   <img src="assets/screenshots/user_home.jpg" alt="User Home" width="200"/>
   <img src="assets/screenshots/user_doctor_view.jpg" alt="User Doctors view" width="200"/>
   <img src="assets/screenshots/user_moew.jpg" alt="user activities" width="200"/>
 </p>
 
+---
+
+<h2 align="center">Appointment Booking</h2>
 <p align="center">
   <img src="assets/screenshots/appoint_booking.jpg" alt="Main" width="200"/>
   <img src="assets/screenshots/payment.jpg" alt="User Registration" width="200"/>
